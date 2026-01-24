@@ -31,3 +31,16 @@ function removeActiveContent() {
         menu.classList.remove("active");
     }) 
 }
+const scroll_notif = document.querySelector(".scroll");
+
+window.addEventListener("scroll", () =>{
+    if(scrollY >= 200){
+        scroll_notif.classList.add("active");
+    }else{
+        scroll_notif.classList.remove("active");
+    }
+});
+
+scroll_notif.addEventListener("click", () => {
+    globalThis.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+});

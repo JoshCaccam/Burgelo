@@ -22,6 +22,9 @@ html{
 body{
     @apply text-[#2b2b2b] font-[1.6rem] tracking-[1.4];
 }
+.scroll{
+    @apply text-[5rem] p-0 place-content-center text-center fixed right-[3rem] bottom-[3rem] w-[4rem] h-[4rem];
+}
 .btn{
     @apply inline-block py-[1rem] px-[1.5rem] bg-transparent rounded-[5rem] text-[14px] tracking-[0.2rem] ease-in-out duration-[0.5s];
 }
