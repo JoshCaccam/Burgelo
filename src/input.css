@@ -22,6 +22,18 @@ html{
 body{
     @apply text-[#2b2b2b] font-[1.6rem] tracking-[1.4];
 }
+.btn{
+    @apply inline-block py-[1rem] px-[1.5rem] bg-transparent rounded-[5rem] text-[14px] tracking-[0.2rem] ease-in-out duration-[0.5s];
+}
+.btn.bg--primary{
+    @apply bg-[#ffc139] text-[#ffffff];
+}
+.btn.bg--primary:hover{
+    @apply scale-[1.05] ease-in-out duration-[0.5s];
+}
+.btn .menu:hover{
+    @apply bg-[#2b2b2b] text-[#ffc139];
+}
 .header{
     @apply sticky top-0 left-0 p-[1rem] shadow-[0_4px_8px_-4px_rgba(0,0,0,0.1450980392)] bg-[#ffffff] z-999;
 }
