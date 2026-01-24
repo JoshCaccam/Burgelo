@@ -297,6 +297,9 @@ body {
   --tw-ease: var(--ease-in-out);
   transition-timing-function: var(--ease-in-out);
 }
+.header .header__wrapper .header__nav ul li a i {
+  display: none;
+}
 .header .header__wrapper .header__nav ul li a:hover {
   color: #ffc139;
   --tw-duration: 0.25s;

@@ -64,6 +64,9 @@ body{
 .header .header__wrapper .header__nav ul li a{
     @apply text-[15px] text-[#ffffff] ease-in-out duration-[0.25s];
 }
+.header .header__wrapper .header__nav ul li a i{
+    @apply hidden;
+}
 .header .header__wrapper .header__nav ul li a:hover{
     @apply text-[#ffc139] ease-in-out duration-[0.25s];
 }
