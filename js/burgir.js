@@ -7,7 +7,7 @@ burgirBtn.addEventListener("click", () => {
 });
 
 const menuNav = document.querySelectorAll(".tab__nav__link");
-const menuContent = document.querySelectorAll(".menu__page__content__item");
+const menuContent = document.querySelectorAll(".menu__content__item");
 
 menuNav.forEach((menu) => {
     menu.addEventListener("click", () => {
