@@ -47,16 +47,22 @@ body{
     @apply bg-[#2b2b2b] text-[#ffc139];
 }
 .header{
-    @apply sticky top-0 left-0 p-4 shadow-[0_4px_8px_-4px_rgba(0,0,0,0.1450980392)] bg-[#ffffff] z-999;
+    @apply sticky top-0 left-0 p-4 shadow-[0_4px_8px_-4px_rgba(0,0,0,0.1450980392)] bg-[#ffffff] z-999 md:top-[-6.2rem] md:left-0;
 }
 .header .header__wrapper{
-    @apply flex items-center justify-between;
+    @apply flex items-center justify-between md:flex-col md:gap-4;
+}
+.header .header__wrapper .branding{
+    @apply md:flex md:justify-between md:items-center md:w-full;
 }
 .header .header__wrapper .branding h3{
-    @apply hidden;
+    @apply hidden md:block md:font-[800] md:text-[18.72px];
+}
+.header .header__wrapper .branding img{
+    @apply w-[160.53px] h-[61.68px];
 }
 .header .header__wrapper .header__nav{
-    @apply bg-[#2b2b2b] absolute -right-400 h-[702.2px] top-[6.2rem] w-full ease-in-out duration-[0.25s];
+    @apply bg-[#2b2b2b] absolute -right-400 h-[702.2px] top-[5.9rem] w-full ease-in-out duration-[0.25s] md:sticky md:top-[6.2rem] md:h-fit md:bg-[#ffffff];
 }
 .header .header__wrapper .header__nav.open{
     @apply right-0;
@@ -71,13 +77,40 @@ body{
     @apply hidden;
 }
 .header .header__wrapper .header__nav ul{
-    @apply text-center flex flex-col gap-[1.8rem] pt-[6.2rem];
+    @apply text-center flex flex-col gap-[1.8rem] pt-[5.7rem] md:pt-4 md:flex-row md:justify-center;
 }
 .header .header__wrapper .header__nav ul li a{
-    @apply text-[15px] text-[#ffffff] ease-in-out duration-[0.25s];
+    @apply text-[15px] text-[#ffffff] ease-in-out duration-[0.25s] md:text-[#2b2b2b];
+}
+.header .header__wrapper .header__nav ul li a:first-child{
+    @apply md:flex md:items-center md:gap-2 md:relative md:transition-all md:duration-200;
+}
+.header .header__wrapper .header__nav ul li a:first-child .arrows{
+    @apply md:relative md:w-4 md:h-4;
+}
+.header .header__wrapper .header__nav ul li a:first-child .arrows .arrow-down{
+    @apply md:h-full md:translate-[unset] md:opacity-100 md:ease-in-out md:duration-[0.25s];
+}
+.header .header__wrapper .header__nav ul li a:first-child .arrows .arrow-up{
+    @apply md:h-0 md:opacity-0 md:translate-x-0 md:ease-in-out md:duration-[0.25s];
+}
+.header .header__wrapper .header__nav ul li a:first-child i{
+    @apply md:place-content-center;
+}
+.header .header__wrapper .header__nav ul li a:first-child.active{
+    @apply md:text-[#ffc139];
+}
+.header .header__wrapper .header__nav ul li a:first-child.active i{
+    @apply md:text-[#ffc139]
+}
+.header .header__wrapper .header__nav ul li a:first-child.active .arrow-down{
+    @apply md:h-0 md:opacity-0 md:translate-x-0 md:ease-in-out md:duration-[0.25s];
+}
+.header .header__wrapper .header__nav ul li a:first-child.active .arrow-up{
+    @apply md:h-full md:translate-[unset] md:opacity-100 md:ease-in-out md:duration-[0.25s];
 }
 .header .header__wrapper .header__nav ul li a i{
-    @apply hidden;
+    @apply hidden md:block text-[#2b2b2b];
 }
 .header .header__wrapper .header__nav ul li a:hover{
     @apply text-[#ffc139] ease-in-out duration-[0.25s];
@@ -86,7 +119,7 @@ body{
     @apply hidden;
 }
 .header .burgir{
-    @apply p-[0.55rem] bg-[#ffc139] rounded-[0.3rem] cursor-pointer;
+    @apply p-[0.40rem] bg-[#ffc139] rounded-[0.3rem] cursor-pointer md:hidden;
 }
 .header .burgir span{
     @apply w-6 h-1 bg-[#ffffff] block rounded-lg ease-in-out duration-500;
@@ -94,11 +127,29 @@ body{
 .header .burgir span:nth-child(2){
     @apply my-[0.3rem]
 }
-.banner .container{
-    @apply bg-[url("/img/banner.webp")] h-125 bg-cover bg-no-repeat bg-center p-4 flex items-center max-w-520;
+.header .burgir.open { 
+    @apply bg-[#ffffff]; 
 }
-.banner .container .banner_wrapper{
-    @apply flex items-center;
+.header .burgir.open span{
+    @apply bg-[#2b2b2b];
+}
+.header .burgir.open span:nth-child(1){ 
+    @apply rotate-45 translate-y-2; 
+}
+.header .burgir.open span:nth-child(2){ 
+    @apply opacity-0; 
+}
+.header .burgir.open span:nth-child(3){ 
+    @apply -rotate-45 -translate-y-[0.6rem]; 
+}
+.banner{
+    @apply md:pt-0;
+}
+.banner .container{
+    @apply bg-[url("/img/banner.webp")] h-125 bg-cover bg-no-repeat bg-center p-4 flex items-center max-w-520 md:p-[3rem];
+}
+.banner .container .banner__wrapper img{
+    @apply max-w-[280.99px] max-h-[214.21px] md:w-[233.6px];
 }
 .banner .container .banner__wrapper h2{
     @apply text-[50px] text-white tracking-[10px] font-[450] font-primary;
@@ -107,7 +158,7 @@ body{
     @apply text-[16px] text-white font-paragraph;
 }
 .banner .container .banner__wrapper .banner__text{
-    @apply flex flex-col w-fit max-w-120; 
+    @apply flex flex-col w-fit max-w-120 md:translate-x-[3.3rem] md:translate-y-[-4rem]; 
 }
 .banner .container .banner__wrapper .banner__text a{
     @apply transition-all ease-in-out duration-500 inline-block py-2 px-6 w-46 bg-transparent rounded-[5rem] text-center font-[14px] font-paragraph border-solid border border-transparent mt-4;
@@ -158,7 +209,7 @@ body{
     @apply scale-[1.05] rotate-360 transition-all duration-1000 ease-[cubic-bezier(0.165,0.84,0.44,1)] bg-[#2b2b2b] text-[#ffc139];
 }
 .promos__wrapper{
-    @apply grid grid-cols-[1fr] gap-4;
+    @apply grid grid-cols-[1fr] gap-2;
 }
 .promos .container{
     @apply py-4 px-0 max-w-520 w-full m-auto;
@@ -200,7 +251,7 @@ body{
     @apply text-[30px] leading-1;
 }
 .menu__tabs ul{
-    @apply flex gap-16 justify-center p-8;
+    @apply flex gap-4 justify-center p-8;
 }
 .menu__tabs ul .tab__nav__link{
     @apply flex flex-col items-center justify-center gap-4 tracking-[0.2rem] text-[25px] text-center min-w-28 p-4 border-b-[3px] border-[#00000008];
@@ -260,7 +311,7 @@ body{
     @apply text-[13px] font-paragraph text-[#00000067] block;
 }
 .menu__content__item .menu__item .menu__item__text a.btn{
-    @apply w-fit text-[15px] font-paragraph px-8 py-[0.51rem]  place-content-center flex gap-1 text-center;
+    @apply w-fit text-[9.4px] font-paragraph px-8 py-[0.51rem]  place-content-center flex gap-1 text-center;
 }
 .menu__content__item .menu__item .menu__item__text a.btn i{
     @apply inline-block place-content-center;

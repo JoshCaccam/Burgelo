@@ -6,6 +6,11 @@ burgirBtn.addEventListener("click", () => {
     headerNav.classList.toggle("open");
 });
 
+function show__menu() {
+    document.querySelector(".home__menu").classList.toggle("active");
+    document.querySelector(".home__menu__btn").classList.toggle("active");
+}
+
 const menuNav = document.querySelectorAll(".tab__nav__link");
 const menuContent = document.querySelectorAll(".menu__content__item");
 
