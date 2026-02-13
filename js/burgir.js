@@ -49,3 +49,7 @@ window.addEventListener("scroll", () =>{
 scroll_notif.addEventListener("click", () => {
     globalThis.scrollTo({ top: 0, left: 0, behavior: "smooth" });
 });
+function show__menu() {
+    document.querySelector(".home__menu").classList.toggle("active");
+    document.querySelector(".home__menu__btn").classList.toggle("active");
+}
