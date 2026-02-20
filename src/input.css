@@ -340,7 +340,7 @@ body{
     @apply bg-[url("../img/offers3.png")] h-180 md:h-[500.4px];
 }
 .promos__wrapper .offer:nth-child(2) .text{
-    @apply relative top-[12vh] left-4 md:left-0;
+    @apply relative top-[12vh] left-4 md:left-0 lg:top-0 lg:mt-48 lg:ml-4;
 }
 .promos__wrapper .offer:nth-child(2) img{
     @apply md:w-[144.06px];
@@ -352,7 +352,7 @@ body{
     @apply leading-1 mb-6;
 }
 .promos__wrapper .offer:last-child .text{
-    @apply relative bottom-[19vh] left-4 md:left-0 md:bottom-[15vh];
+    @apply relative bottom-[19vh] left-4 md:left-0 md:bottom-[15vh] lg:bottom-0 lg:mb-52;
 }
 .promos__wrapper .offer:last-child img{
     @apply md:w-[200.81px];
